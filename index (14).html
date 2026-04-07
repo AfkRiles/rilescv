@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<!-- SAVE THIS FILE AS: index.html -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Riles Web3 CV</title>
+  <link rel="icon" type="image/png" href="data:image/png;base64,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" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.2/babel.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; background: #fd2601; color: #fff; min-height: 100vh; overflow-x: hidden; }
+    ::selection { background: #fff; color: #fd2601; }
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: #fd2601; }
+    ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.4); border-radius: 4px; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    .headline-line { display: inline-block; animation: fadeUp 0.8s ease both; }
+    .headline-line:last-child { animation-delay: 0.15s; }
+    @media (max-width: 768px) { .desktop-nav { display: none !important; } .hero-info-left { position: relative !important; bottom: auto !important; left: auto !important; padding: 24px !important; width: 100% !important; box-sizing: border-box !important; } .timeline-line { display: none; } }
+    @media (max-width: 640px) { .contact-grid { grid-template-columns: 1fr !important; } }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useEffect, useRef } = React;
+
+    const COPY = {
+      email: "nftriles@gmail.com",
+      location: "South Africa (CET-friendly)",
+      stats: [
+        { value: "5+", label: "YEARS", sub: "FULL-TIME WEB3" },
+        { value: "15+", label: "PROJECTS", sub: "HANDS-ON DELIVERY" },
+        { value: "$9.5M+", label: "CAPITAL RAISED", sub: "Across NFT & Web3 Projects" },
+        { value: "10K+", label: "PERSONAL X FOLLOWING", sub: "Organic. Built to Amplify Clients." },
+        { value: "100K+", label: "FOLLOWERS GROWN", sub: "Across Web3 Projects" },
+      ],
+      capabilities: [
+        { value: "BRAND STRATEGY", label: "Positioning & Narrative" },
+        { value: "GO-TO-MARKET", label: "Launch Execution" },
+        { value: "GROWTH ENGINE", label: "Acquisition Systems" },
+        { value: "BD", label: "Partnership Growth" },
+        { value: "SOCIAL STRATEGY", label: "Content & Community" },
+        { value: "VIBE CODER", label: "Building apps and tools using AI" },
+      ],
+      cases: [
+        {
+          id: "canna",
+          logo: "data:image/png;base64,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",
+          brandColor: "#00E676",
+          tag: "CMO",
+          title: "CANNA SAPIENS",
+          subtitle: "Growth & Chief Marketing Officer",
+          year: "2024–2026",
+          raised: "$950,000",
+          raisedLabel: "AMOUNT RAISED",
+          statExtra: "50K+",
+          statExtraLabel: "FOLLOWERS SCALED ON X",
+          context: "Canna Sapiens entered a highly competitive NFT market requiring strong narrative clarity, structured distribution, and disciplined execution to break through noise and successfully raise capital.\n\nI was brought in to lead marketing and growth strategy from early-stage positioning through mint execution and long-term ecosystem development.",
+          objective: "Lead end-to-end growth and marketing across pre-mint, mint, and post-mint phases by:\n• Scaling brand visibility and audience\n• Structuring a high-conversion pre-mint campaign\n• Driving capital raise through NFT sales\n• Securing high-level ecosystem partnerships\n• Building sustainable post-mint growth infrastructure",
+          did: [
+            "Pre-Mint & Mint Phase",
+            "Led full brand narrative and positioning strategy",
+            "Designed and executed a 12-month pre-mint marketing campaign leveraging partnerships and ecosystem distribution",
+            "Scaled X (Twitter) from 5,000 → 50,000+ followers",
+            "Executed full mint campaign for 6,000 NFTs at 0.05 ETH",
+            "Post-Mint Leadership (CMO — Feb 12, 2025 → Present)",
+            "Continued as Chief Marketing Officer post-mint to drive ecosystem expansion",
+            "Shipped and marketed: NFT staking platform, full website launch, NFT raffle marketplace, Crash-style & DeFi 'GambFi' game on Abstract",
+            "Secured and distributed $50,000+ in GRIND memecoin to the community as ecosystem incentives",
+            "Led full marketing campaign for the rebrand of the RWA brick-and-mortar cannabis store in Prague",
+            "Relocated in-house to Prague for 4 months to work directly with the founding team on brand expansion and execution",
+            "Maintained ongoing campaign cadence across all verticals to sustain momentum beyond mint",
+          ],
+          results: [
+            "Grew X from 5K → 50K+",
+            "Minted out 6,000 NFTs at 0.05 ETH",
+            "Raised approximately $950,000",
+            "Secured and distributed $50K+ in ecosystem incentives",
+            "Expanded from NFT launch to multi-product ecosystem",
+            "Sustained long-term community momentum post-mint",
+          ],
+          links: [
+            { label: "Twitter (X)", url: "https://x.com/CannaSapiensX" },
+            { label: "Website", url: "https://cannasapiens.io/" },
+            { label: "Linktree", url: "https://linktr.ee/cannasapiens" },
+          ],
+          references: [
+            { label: "Founder", url: "https://x.com/FilipFinks" },
+            { label: "Founder", url: "https://x.com/TheSou1cake" },
+            { label: "Founder", url: "https://x.com/TBagginson" },
+          ],
+        },
+        {
+          id: "eqlipse",
+          logo: "data:image/png;base64,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",
+          brandColor: "#ffffff",
+          tag: "CMO",
+          title: "EQLIPSE",
+          subtitle: "Partnerships & Chief Marketing Officer",
+          year: "2023–2024",
+          raised: "$58,000",
+          raisedLabel: "AMOUNT RAISED",
+          context: "Eqlipse is a Web3 talent-booking platform where NFTs act as access credentials, connecting creators and operators with opportunities in decentralized ecosystems while bridging real-world careers into Web3.",
+          objective: "Brought in to drive pre-mint growth and credibility by building a strategic audience, improving mint performance, and increasing visibility in a competitive Web3 market. Led community scaling, partner pipelines, and capital raise support.",
+          did: [
+            "Led full marketing operations, campaign design, and execution from pre-mint to launch",
+            "Built and executed influencer outreach and collaboration pipelines for launch distribution",
+            "Managed messaging, narrative positioning, and promotional timing across channels",
+          ],
+          results: [
+            "275 NFTs minted at 0.085 ETH each — fully sold through the launch campaign",
+            "Raised approximately $58,000",
+            "Successful launch campaign in a competitive market environment",
+            "Partnerships established that expanded reach pre-launch and informed early distribution strategy",
+          ],
+          links: [
+            { label: "Twitter (X)", url: "https://x.com/EqlipseNFT" },
+            { label: "Website", url: "https://eqlipse.io/" },
+            { label: "Link Hub", url: "https://hub.xyz/eqlipse" },
+          ],
+          references: [
+            { label: "Co-Founder", url: "https://x.com/Alphageek79" },
+            { label: "Co-Founder", url: "https://x.com/Eman_sol_" },
+          ],
+        },
+        {
+          id: "cyan",
+          logo: "data:image/png;base64,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",
+          brandColor: "#00E5D4",
+          tag: "SMM",
+          title: "CYAN",
+          subtitle: "Social Media Manager · 2024–2025",
+          year: "2024–2025",
+          raised: "85%",
+          raisedLabel: "REVENUE INCREASE",
+          context: "Cyan is a Web3 liquidity platform enabling users to access capital through their digital assets — offering Buy Now Pay Later, lending and borrowing solutions. Backed by Animoca Brands, Cyan operates within a highly competitive DeFi and NFT infrastructure space.\n\nThe brand required a stronger social presence to communicate complex financial products clearly while building trust within the Web3 ecosystem.",
+          objective: "Hired to establish a consistent, credible brand presence across social channels by improving messaging clarity, strengthening engagement, and building repeatable content systems — all designed to drive platform growth. Additionally aligned social strategy with product releases, partnerships, and revenue initiatives.",
+          did: [
+            "Designed and implemented structured content planning and scheduling systems",
+            "Owned day-to-day social strategy and execution across X and related channels",
+            "Ran targeted outreach and engagement campaigns to increase ecosystem visibility",
+            "Developed repeatable content playbooks to ensure consistency and scalability",
+            "Refined brand tone and messaging to better communicate DeFi product value",
+          ],
+          results: [
+            "Improved posting consistency and overall content quality",
+            "Measurable increase in engagement and community interaction",
+            "Established a clear, professional brand voice across channels",
+            "Contributed to 85% growth in platform revenue during my 12-month contract",
+          ],
+          links: [
+            { label: "Twitter (X)", url: "https://x.com/usecyan" },
+            { label: "Website", url: "https://usecyan.com" },
+          ],
+          references: [
+            { label: "Founder", url: "https://x.com/eremitik" },
+            { label: "CMO", url: "https://x.com/DareVader" },
+          ],
+        },
+
+      ],
+      experience: [
+        {
+          role: "Chief Marketing Officer",
+          company: "3+ Years",
+          bullets: [
+            "Led pre-market launches, capital raises, and post-launch ecosystem expansion",
+            "Built and managed multi-vertical marketing campaigns across NFT, DeFi, and product ecosystems",
+            "Structured partnership pipelines and high-level introductions to drive credibility and distribution",
+            "Managed cross-functional teams (design, dev, community) to align execution with strategic direction",
+            "Shipped new product verticals post-launch including staking, marketplaces, and DeFi products",
+          ],
+          tools: [
+            { category: "Analytics", items: ["X Analytics", "Dune Analytics"] },
+            { category: "Planning & Design", items: ["Notion", "Canva", "Asana"] },
+            { category: "Platforms", items: ["Twitter/X", "Discord", "Telegram"] },
+          ],
+        },
+        {
+          role: "Growth & Business Development",
+          company: "3 Years",
+          bullets: [
+            "Built and scaled partnership pipelines across Web3 ecosystems",
+            "Sourced, negotiated, and executed co-marketing and strategic collaborations",
+            "Developed distribution leverage through aligned project partnerships",
+            "Contributed to capital raise strategy through network positioning and ecosystem introductions",
+          ],
+          tools: [
+            { category: "Community Tools", items: ["Discord", "Loveable"] },
+            { category: "Planning", items: ["Notion", "Asana", "Trello"] },
+            { category: "Platforms", items: ["Discord", "Twitter/X", "Telegram"] },
+          ],
+        },
+        {
+          role: "Social Media Manager",
+          company: "2+ Years",
+          bullets: [
+            "Designed and implemented structured content systems for scalable output",
+            "Managed daily content strategy, scheduling, and execution across X and community channels",
+            "Established brand tone, voice, and positioning consistency",
+            "Ran engagement and outreach campaigns to increase ecosystem visibility",
+            "Aligned social campaigns directly with revenue and product milestones",
+            "Contributed to measurable revenue growth through improved distribution and awareness",
+          ],
+          tools: [
+            { category: "Content & Design", items: ["Canva", "Figma"] },
+            { category: "Strategy & Planning", items: ["Notion", "Trello"] },
+            { category: "Analytics & Insights", items: ["Google Analytics", "Platform-native insights"] },
+            { category: "Community & Publishing", items: ["X (Twitter)", "LinkedIn", "Telegram", "Discord"] },
+            { category: "Collaboration", items: ["Google Workspace", "Team approval workflows"] },
+          ],
+        },
+        {
+          role: "Partnerships & Collaborations",
+          company: "3 Years",
+          bullets: [
+            "Identified and secured high-value ecosystem partnerships",
+            "Built co-marketing frameworks to maximize shared exposure",
+            "Managed collaboration pipelines from sourcing to execution",
+            "Strengthened brand credibility through strategic alignment with reputable operators",
+            "Expanded reach through cross-community integrations",
+          ],
+          tools: [
+            { category: "Outreach & Comms", items: ["Discord", "Twitter/X", "Telegram"] },
+            { category: "Planning & Tracking", items: ["Google Sheets", "Asana"] },
+          ],
+        },
+      ],
+      playbook: [
+        {
+          title: "BRAND POSITIONING",
+          steps: [
+            { step: "Assess", desc: "Understand the product, audience, and current perception. Identify what's unclear or inconsistent." },
+            { step: "Clarify", desc: "Define a simple, ownable message that explains what the project is and why it matters." },
+            { step: "Roll Out", desc: "Apply the positioning across content, partnerships, and community touchpoints." },
+            { step: "Refine", desc: "Adjust messaging based on feedback, engagement, and market response." },
+          ],
+        },
+        {
+          title: "GROWTH & DISTRIBUTION",
+          steps: [
+            { step: "Review", desc: "Look at existing channels, audience flow, and where attention is being lost." },
+            { step: "Structure", desc: "Build simple systems for acquisition and retention — content cadence, launch sequencing, and distribution loops." },
+            { step: "Activate", desc: "Launch campaigns with clear timing and coordinated rollout." },
+            { step: "Optimise", desc: "Track performance, remove what isn't working, and focus on what drives real traction." },
+          ],
+        },
+        {
+          title: "PARTNERSHIPS & BUSINESS DEVELOPMENT",
+          steps: [
+            { step: "Identify Fit", desc: "Find aligned teams and individuals where there's shared value, not just visibility." },
+            { step: "Align Value", desc: "Structure collaborations that benefit both sides clearly and simply." },
+            { step: "Launch Together", desc: "Coordinate messaging and distribution across both audiences." },
+            { step: "Evaluate Impact", desc: "Measure results based on reach, conversions, and long-term relationship value." },
+          ],
+        },
+        {
+          title: "SOCIAL & COMMUNITY SYSTEMS",
+          steps: [
+            { step: "Audit Presence", desc: "Review tone, clarity, consistency, and gaps across platforms." },
+            { step: "Build Structure", desc: "Create content calendars, templates, and posting frameworks." },
+            { step: "Execute Consistently", desc: "Maintain steady output with aligned messaging." },
+            { step: "Improve the System", desc: "Review performance and adjust the overall structure, not just individual posts." },
+          ],
+        },
+        {
+          title: "POST-LAUNCH MOMENTUM",
+          steps: [
+            { step: "Assess Drop-Off", desc: "Understand where attention slowed and why." },
+            { step: "Reposition", desc: "Introduce new angles, updates, or incentives that renew interest." },
+            { step: "Re-engage", desc: "Activate the existing community while expanding to new audiences." },
+            { step: "Sustain Activity", desc: "Maintain consistent updates, product releases, and milestone-driven campaigns." },
+          ],
+        },
+      ],
+    };
+
+    function useScrollY() {
+      const [y, setY] = useState(0);
+      useEffect(() => {
+        const fn = () => setY(window.scrollY);
+        window.addEventListener("scroll", fn, { passive: true });
+        return () => window.removeEventListener("scroll", fn);
+      }, []);
+      return y;
+    }
+
+    function useInView(ref, threshold = 0.15) {
+      const [inView, setInView] = useState(false);
+      useEffect(() => {
+        const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) setInView(true); }, { threshold });
+        if (ref.current) obs.observe(ref.current);
+        return () => obs.disconnect();
+      }, [ref, threshold]);
+      return inView;
+    }
+
+    const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+
+    function btnStyle(variant) {
+      const base = { cursor: "pointer", fontFamily: "inherit", fontSize: 10, fontWeight: 700, letterSpacing: "0.15em", padding: "10px 20px", borderRadius: 4, transition: "all 0.2s" };
+      if (variant === "solid") return { ...base, background: "#fff", color: "#fd2601", border: "none" };
+      if (variant === "outline") return { ...base, background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.6)" };
+      return { ...base, background: "transparent", color: "rgba(255,255,255,0.6)", border: "1px solid rgba(255,255,255,0.2)" };
+    }
+
+    function Navbar() {
+      const scrollY = useScrollY();
+      const links = [
+        { label: "IMPACT", id: "impact" },
+        { label: "CASES", id: "cases" },
+        { label: "EXPERIENCE", id: "experience" },
+        { label: "PROCESS", id: "playbook" },
+      ];
+      return (
+        <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 100, padding: "0 2rem", height: 64, display: "flex", alignItems: "center", justifyContent: "space-between", background: scrollY > 60 ? "rgba(253,38,1,0.85)" : "transparent", backdropFilter: scrollY > 60 ? "blur(12px)" : "none", transition: "background 0.4s", borderBottom: scrollY > 60 ? "1px solid rgba(255,255,255,0.1)" : "none" }}>
+          <button onClick={() => scrollTo("hero")} style={{ fontFamily: "'Anton', Impact, sans-serif", fontSize: 18, letterSpacing: "0.15em", color: "#fff", background: "none", border: "none", cursor: "pointer" }}>RILES WEB3 CV</button>
+          <div style={{ display: "flex", gap: "2.5rem" }} className="desktop-nav">
+            {links.map((l) => (
+              <button key={l.id} onClick={() => scrollTo(l.id)} style={{ background: "none", border: "none", cursor: "pointer", color: "#fff", fontFamily: "inherit", fontSize: 11, letterSpacing: "0.15em", fontWeight: 600, opacity: 0.9 }}
+                onMouseEnter={(e) => (e.target.style.opacity = 0.6)} onMouseLeave={(e) => (e.target.style.opacity = 0.9)}>{l.label}</button>
+            ))}
+          </div>
+          <button onClick={() => scrollTo("contact")} style={{ display: "flex", alignItems: "center", gap: 10, background: "none", border: "none", cursor: "pointer", color: "#fff", fontFamily: "inherit", fontSize: 11, letterSpacing: "0.12em", fontWeight: 600 }}>
+            <span style={{ opacity: 0.8 }}>LET'S TALK</span>
+            <span style={{ width: 34, height: 34, borderRadius: "50%", border: "1.5px solid rgba(255,255,255,0.7)", display: "flex", alignItems: "center", justifyContent: "center", transition: "background 0.25s" }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = "#fff"; e.currentTarget.querySelector("span").style.color = "#fd2601"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.querySelector("span").style.color = "#fff"; }}>
+              <span style={{ color: "#fff", fontSize: 14, transition: "color 0.25s", lineHeight: 1 }}>↗</span>
+            </span>
+          </button>
+        </nav>
+      );
+    }
+
+    function SectionTitle({ children }) {
+      return <h2 style={{ fontFamily: "'Anton', Impact, sans-serif", fontSize: "clamp(48px, 8vw, 120px)", color: "#fff", letterSpacing: "0.04em", lineHeight: 1, margin: "0 0 48px", textTransform: "uppercase" }}>{children}</h2>;
+    }
+
+    function HeroSection() {
+      const heroInfo = [
+        "RILEY WATSON (Aka Riles)",
+        "GROWTH / MARKETING / BD / SOCIAL",
+        "5+ YEARS FULL-TIME",
+        "15+ PROJECTS",
+        "TOTAL HELP RAISE: $9.5M+",
+        "SOUTH AFRICA (CET-FRIENDLY)",
+      ];
+      return (
+        <section id="hero" style={{ minHeight: "100vh", position: "relative", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", overflow: "hidden", paddingTop: 64 }}>
+          <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", pointerEvents: "none", zIndex: 1 }}>
+            <span style={{ fontFamily: "'Anton', Impact, sans-serif", fontSize: "clamp(160px, 35vw, 420px)", color: "#fff", opacity: 0.06, filter: "blur(4px)", letterSpacing: "0.05em", userSelect: "none", lineHeight: 1 }}>RILES</span>
+          </div>
+          <div style={{ position: "absolute", bottom: 0, right: "-60px", width: 300, height: 300, background: "#F4791B", borderRadius: "50%", filter: "blur(80px)", mixBlendMode: "screen", opacity: 0.6, pointerEvents: "none", zIndex: 2 }} />
+          <div style={{ position: "absolute", bottom: 0, left: "-100px", width: 600, height: 300, background: "#F4791B", borderRadius: "50%", filter: "blur(80px)", mixBlendMode: "screen", opacity: 0.6, pointerEvents: "none", zIndex: 2 }} />
+          <div style={{ position: "relative", zIndex: 10, textAlign: "center", width: "100%" }}>
+            <h1 style={{ fontFamily: "'Anton', Impact, sans-serif", fontSize: "clamp(60px, 12vw, 180px)", color: "#fff", letterSpacing: "0.04em", lineHeight: 0.95, margin: 0, textTransform: "uppercase" }}>
+              <span className="headline-line">GROWTH</span><br />
+              <span className="headline-line">OPERATOR</span>
+            </h1>
+          </div>
+
+          <div className="hero-info-left" style={{ position: "absolute", bottom: 120, left: "clamp(24px, 5vw, 80px)", zIndex: 30, display: "flex", flexDirection: "column", gap: 5 }}>
+            {heroInfo.map((line, i) => (
+              <div key={i} style={{ display: "flex", alignItems: "center", gap: 8, color: "#fff", fontSize: "clamp(9px, 1.1vw, 12px)", letterSpacing: "0.12em", fontWeight: 600, opacity: i === 0 ? 1 : 0.75 }}>
+                <span style={{ fontSize: "clamp(8px, 1vw, 11px)", opacity: 0.7 }}>•</span>{line}
+              </div>
+            ))}
+            <div style={{ display: "flex", gap: 10, marginTop: 16, flexWrap: "wrap" }}>
+              <button onClick={() => scrollTo("impact")} style={btnStyle("solid")}>VIEW IMPACT</button>
+              <button onClick={() => scrollTo("contact")} style={btnStyle("outline")}>CONTACT</button>
+            </div>
+          </div>
+          <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 30, display: "flex", gap: 10, padding: "14px 32px", background: "rgba(0,0,0,0.15)", backdropFilter: "blur(8px)", flexWrap: "wrap", justifyContent: "center", borderTop: "1px solid rgba(255,255,255,0.1)" }}>
+            {["15+ PROJECTS", "5+ YEARS", "$9.5M+ RAISED", "GROWTH SYSTEMS", "PARTNERSHIPS", "SOCIAL + COMMUNITY"].map((badge, i) => (
+              <span key={i} style={{ color: "#fff", fontSize: 10, letterSpacing: "0.14em", fontWeight: 700, padding: "6px 14px", border: "1px solid rgba(255,255,255,0.3)", borderRadius: 100, opacity: 0.9, whiteSpace: "nowrap" }}>{badge}</span>
+            ))}
+          </div>
+        </section>
+      );
+    }
+
+    function ImpactSection() {
+      const [tab, setTab] = useState("metrics");
+      const ref = useRef(null);
+      const inView = useInView(ref);
+      const items = tab === "metrics" ? COPY.stats : COPY.capabilities;
+      return (
+        <section id="impact" ref={ref} style={{ padding: "100px clamp(24px,6vw,100px)" }}>
+          <div style={{ opacity: inView ? 1 : 0, transform: inView ? "translateY(0)" : "translateY(40px)", transition: "all 0.7s ease" }}>
+            <SectionTitle>IMPACT</SectionTitle>
+            <div style={{ display: "flex", gap: 4, marginBottom: 40, background: "rgba(0,0,0,0.2)", borderRadius: 8, padding: 4, width: "fit-content" }}>
+              {["metrics", "capabilities"].map((t) => (
+                <button key={t} onClick={() => setTab(t)} style={{ padding: "8px 20px", borderRadius: 6, border: "none", cursor: "pointer", fontFamily: "inherit", fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", background: tab === t ? "#fff" : "transparent", color: tab === t ? "#fd2601" : "rgba(255,255,255,0.7)", transition: "all 0.2s" }}>
+                  {t.toUpperCase()}
+                </button>
+              ))}
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: 16 }}>
+              {items.map((item, i) => (
+                <div key={i} style={{ background: "rgba(255,255,255,0.08)", backdropFilter: "blur(12px)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: 12, padding: "32px 24px", transition: "transform 0.2s, background 0.2s", cursor: "default" }}
+                  onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-4px)"; e.currentTarget.style.background = "rgba(255,255,255,0.14)"; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.background = "rgba(255,255,255,0.08)"; }}>
+                  <div style={{ fontFamily: "'Anton', Impact, sans-serif", fontSize: 36, color: "#fff", lineHeight: 1, marginBottom: 8 }}>{item.value}</div>
+                  <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", color: "#fff", marginBottom: 4 }}>{item.label}</div>
+                  {item.sub && <div style={{ fontSize: 10, color: "rgba(255,255,255,0.6)", letterSpacing: "0.08em" }}>{item.sub}</div>}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    function CaseModal({ c, onClose }) {
+      useEffect(() => {
+        document.body.style.overflow = "hidden";
+        return () => { document.body.style.overflow = ""; };
+      }, []);
+
+      const didSections = [];
+      let cur = null;
+      c.did.forEach((item) => {
+        if (item.includes("Phase") || item.includes("Leadership") || item.includes("Post-Mint") || item.includes("Pre-Mint")) {
+          if (cur) didSections.push(cur);
+          cur = { heading: item, bullets: [] };
+        } else {
+          if (!cur) cur = { heading: null, bullets: [] };
+          cur.bullets.push(item);
+        }
+      });
+      if (cur) didSections.push(cur);
+
+      return (
+        <div style={{ position: "fixed", inset: 0, zIndex: 200, background: "linear-gradient(160deg, #fd2601 0%, #f37e1c 100%)", overflowY: "auto" }}>
+          <div style={{ position: "sticky", top: 0, zIndex: 10, display: "flex", alignItems: "center", justifyContent: "space-between", padding: "20px clamp(24px,6vw,100px)", background: "rgba(253,38,1,0.9)", backdropFilter: "blur(12px)", borderBottom: "1px solid rgba(255,255,255,0.15)" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+              {c.logo && <img src={c.logo} alt={c.title} style={{ width: 44, height: 44, borderRadius: 10, objectFit: "cover", border: "2px solid rgba(255,255,255,0.3)" }} />}
+              <div>
+                <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: "0.18em", color: "rgba(255,255,255,0.6)" }}>{c.tag} · {c.year}</div>
+                <div style={{ fontFamily: "'Anton', Impact, sans-serif", fontSize: 22, color: "#fff", letterSpacing: "0.04em" }}>{c.title}</div>
+              </div>
+            </div>
+            <button onClick={onClose} style={{ background: "rgba(255,255,255,0.15)", border: "1px solid rgba(255,255,255,0.3)", color: "#fff", padding: "8px 20px", borderRadius: 100, cursor: "pointer", fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", fontFamily: "inherit" }}>
+              ← BACK
+            </button>
+          </div>
+          <div style={{ padding: "60px clamp(24px,6vw,100px) 40px", borderBottom: "1px solid rgba(255,255,255,0.1)" }}>
+            <div style={{ maxWidth: 900 }}>
+              <div style={{ display: "inline-block", padding: "4px 14px", borderRadius: 100, background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.3)", marginBottom: 20 }}>
+                <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.16em", color: "#fff" }}>{c.tag}</span>
+              </div>
+              <h2 style={{ fontFamily: "'Anton', Impact, sans-serif", fontSize: "clamp(48px, 8vw, 100px)", color: "#fff", margin: "0 0 8px", letterSpacing: "0.04em", lineHeight: 1 }}>{c.title}</h2>
+              <p style={{ fontSize: 16, color: "rgba(255,255,255,0.75)", margin: "0 0 32px", letterSpacing: "0.06em" }}>{c.subtitle}</p>
+              {c.raised && (
+                <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
+                  <div style={{ display: "inline-block", padding: "20px 32px", background: "rgba(255,255,255,0.12)", borderRadius: 12, border: "1px solid rgba(255,255,255,0.2)" }}>
+                    <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: "0.2em", color: "rgba(255,255,255,0.6)", marginBottom: 6 }}>{c.raisedLabel}</div>
+                    <div style={{ fontFamily: "'Anton', Impact, sans-serif", fontSize: 48, color: "#fff", lineHeight: 1 }}>{c.raised}</div>
+                  </div>
+                  {c.statExtra && (
+                    <div style={{ display: "inline-block", padding: "20px 32px", background: "rgba(255,255,255,0.12)", borderRadius: 12, border: "1px solid rgba(255,255,255,0.2)" }}>
+                      <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: "0.2em", color: "rgba(255,255,255,0.6)", marginBottom: 6 }}>{c.statExtraLabel}</div>
+                      <div style={{ fontFamily: "'Anton', Impact, sans-serif", fontSize: 48, color: "#fff", lineHeight: 1 }}>{c.statExtra}</div>
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+          </div>
+          <div style={{ padding: "60px clamp(24px,6vw,100px)", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 48 }}>
+            <div>
+              <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.2em", color: "rgba(255,255,255,0.5)", marginBottom: 16, paddingBottom: 12, borderBottom: "1px solid rgba(255,255,255,0.1)" }}>CONTEXT</div>
+              {c.context.split("\n\n").map((para, i) => (
+                <p key={i} style={{ color: "#fff", fontSize: 15, lineHeight: 1.8, margin: "0 0 12px" }}>{para}</p>
+              ))}
+              <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.2em", color: "rgba(255,255,255,0.5)", margin: "32px 0 16px", paddingBottom: 12, borderBottom: "1px solid rgba(255,255,255,0.1)" }}>OBJECTIVE</div>
+              {c.objective.split("\n\n").map((para, i) => (
+                <p key={i} style={{ color: "#fff", fontSize: 15, lineHeight: 1.8, margin: "0 0 12px", whiteSpace: "pre-line" }}>{para}</p>
+              ))}
+            </div>
+            <div>
+              <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.2em", color: "rgba(255,255,255,0.5)", marginBottom: 16, paddingBottom: 12, borderBottom: "1px solid rgba(255,255,255,0.1)" }}>WHAT I DID</div>
+              {didSections.map((sec, si) => (
+                <div key={si} style={{ marginBottom: 16 }}>
+                  {sec.heading && <div style={{ fontSize: 12, fontWeight: 700, color: "rgba(255,255,255,0.7)", marginBottom: 10, fontStyle: "italic" }}>{sec.heading}</div>}
+                  {sec.bullets.map((b, j) => (
+                    <div key={j} style={{ display: "flex", gap: 12, marginBottom: 10, alignItems: "flex-start" }}>
+                      <span style={{ color: c.brandColor, flexShrink: 0, marginTop: 5, fontSize: 8 }}>●</span>
+                      <p style={{ color: "#fff", fontSize: 14, lineHeight: 1.7, margin: 0 }}>{b}</p>
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+          <div style={{ padding: "0 clamp(24px,6vw,100px) 60px" }}>
+            <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.2em", color: "rgba(255,255,255,0.5)", marginBottom: 20, paddingBottom: 12, borderBottom: "1px solid rgba(255,255,255,0.1)" }}>RESULTS</div>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 16 }}>
+              {c.results.map((r, i) => (
+                <div key={i} style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: 12, padding: "20px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <p style={{ color: "#fff", fontSize: 14, lineHeight: 1.6, margin: 0, textAlign: "center" }}>{r}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          {(c.links.length > 0 || c.references.length > 0) && (
+            <div style={{ padding: "0 clamp(24px,6vw,100px) 80px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 48 }}>
+              {c.links.length > 0 && (
+                <div>
+                  <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.2em", color: "rgba(255,255,255,0.5)", marginBottom: 16, paddingBottom: 12, borderBottom: "1px solid rgba(255,255,255,0.1)" }}>LINKS</div>
+                  <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+                    {c.links.map((l, i) => {
+                      const isX = l.label === "Twitter (X)" || l.label === "Twitter" || (l.url && l.url.includes("x.com") && !l.url.includes("linktr"));
+                      const isLinktree = l.label === "Linktree" || l.label === "Link Hub" || (l.url && (l.url.includes("linktr.ee") || l.url.includes("hub.xyz")));
+                      const icon = isX ? (
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                      ) : isLinktree ? (
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.5a.75.75 0 0 1 .75.75v4.19l2.97-2.97a.75.75 0 1 1 1.06 1.06L13.81 8.5H18a.75.75 0 0 1 0 1.5h-4.19l2.97 2.97a.75.75 0 1 1-1.06 1.06L12.75 11.06V15a.75.75 0 0 1-1.5 0v-3.94l-2.97 2.97a.75.75 0 0 1-1.06-1.06L10.19 10H6a.75.75 0 0 1 0-1.5h4.19L7.22 5.53a.75.75 0 0 1 1.06-1.06l2.97 2.97V3.25A.75.75 0 0 1 12 2.5zm-1 13.25h2v5.5h-2v-5.5z"/></svg>
+                      ) : (
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                      );
+                      return (
+                        <a key={i} href={l.url} target="_blank" rel="noopener noreferrer" title={l.label}
+                          style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 54, height: 54, background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.18)", borderRadius: 10, color: "#fff", textDecoration: "none", transition: "background 0.2s, transform 0.2s" }}
+                          onMouseEnter={e => { e.currentTarget.style.background = "rgba(255,255,255,0.22)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
+                          onMouseLeave={e => { e.currentTarget.style.background = "rgba(255,255,255,0.1)"; e.currentTarget.style.transform = "translateY(0)"; }}
+                        >{icon}</a>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+              {c.references.length > 0 && (
+                <div>
+                  <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.2em", color: "rgba(255,255,255,0.5)", marginBottom: 16, paddingBottom: 12, borderBottom: "1px solid rgba(255,255,255,0.1)" }}>REFERENCES</div>
+                  <div style={{ display: "flex", gap: 10, flexWrap: "wrap", alignItems: "flex-start" }}>
+                    {c.references.map((r, i) => (
+                      <a key={i} href={r.url} target="_blank" rel="noopener noreferrer" title={r.label}
+                        style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 6, width: 64, padding: "10px 6px", background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.18)", borderRadius: 10, color: "#fff", textDecoration: "none", transition: "background 0.2s, transform 0.2s" }}
+                        onMouseEnter={e => { e.currentTarget.style.background = "rgba(255,255,255,0.22)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
+                        onMouseLeave={e => { e.currentTarget.style.background = "rgba(255,255,255,0.1)"; e.currentTarget.style.transform = "translateY(0)"; }}
+                      >
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        <span style={{ fontSize: 8, fontWeight: 700, letterSpacing: "0.08em", color: "rgba(255,255,255,0.7)", textTransform: "uppercase", textAlign: "center", lineHeight: 1.2 }}>{r.label}</span>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      );
+    }
+
+        function CasesSection() {
+      const [active, setActive] = useState(null);
+      const ref = useRef(null);
+      const inView = useInView(ref);
+      return (
+        <section id="cases" ref={ref} style={{ padding: "100px clamp(24px,6vw,100px)" }}>
+          <div style={{ opacity: inView ? 1 : 0, transform: inView ? "translateY(0)" : "translateY(40px)", transition: "all 0.7s ease" }}>
+            <SectionTitle>RECENT COMPANIES</SectionTitle>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 16 }}>
+              {COPY.cases.map((c) => (
+                <div key={c.id} onClick={() => setActive(c)} style={{ background: "rgba(255,255,255,0.08)", backdropFilter: "blur(12px)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: 12, padding: "0", cursor: "pointer", transition: "transform 0.2s, background 0.2s", overflow: "hidden" }}
+                  onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-6px)"; e.currentTarget.style.background = "rgba(255,255,255,0.14)"; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.background = "rgba(255,255,255,0.08)"; }}>
+                  <div style={{ height: 4, background: c.brandColor, width: "100%" }} />
+                  <div style={{ padding: "28px" }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
+                      {c.logo && <img src={c.logo} alt={c.title} style={{ width: 48, height: 48, borderRadius: 10, objectFit: "cover", border: "1px solid rgba(255,255,255,0.15)", flexShrink: 0 }} />}
+                      <div>
+                        <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", color: "rgba(255,255,255,0.6)", marginBottom: 4 }}>{c.tag} · {c.year}</div>
+                        <h3 style={{ fontFamily: "'Anton', Impact, sans-serif", fontSize: 28, color: "#fff", margin: 0, letterSpacing: "0.04em" }}>{c.title}</h3>
+                      </div>
+                    </div>
+                    <p style={{ color: "rgba(255,255,255,0.75)", fontSize: 13, margin: "0 0 24px", letterSpacing: "0.05em" }}>{c.subtitle}</p>
+                    <div style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", color: "#fff", opacity: 0.8 }}>VIEW CASE <span>→</span></div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          {active && <CaseModal c={active} onClose={() => setActive(null)} />}
+        </section>
+      );
+    }
+
+    function ExperienceSection() {
+      const ref = useRef(null);
+      const inView = useInView(ref);
+      return (
+        <section id="experience" ref={ref} style={{ padding: "100px clamp(24px,6vw,100px)" }}>
+          <div style={{ opacity: inView ? 1 : 0, transform: inView ? "translateY(0)" : "translateY(40px)", transition: "all 0.7s ease" }}>
+            <SectionTitle>EXPERIENCE</SectionTitle>
+            <div style={{ position: "relative" }}>
+              <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: 2, background: "rgba(255,255,255,0.2)" }} className="timeline-line" />
+              <div>
+                {COPY.experience.map((exp, i) => (
+                  <div key={i} style={{ marginBottom: 32, paddingLeft: 32, position: "relative", opacity: inView ? 1 : 0, transform: inView ? "translateX(0)" : "translateX(-20px)", transition: `all 0.6s ease ${i * 0.12}s` }}>
+                    <div style={{ position: "absolute", left: -5, top: 20, width: 12, height: 12, borderRadius: "50%", background: "#fff", border: "2px solid #fd2601" }} />
+                    <div style={{ background: "rgba(255,255,255,0.08)", backdropFilter: "blur(12px)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: 12, padding: "28px" }}>
+                      <div style={{ marginBottom: 16 }}>
+                        <div style={{ fontFamily: "'Anton', Impact, sans-serif", fontSize: 24, color: "#fff", letterSpacing: "0.04em" }}>{exp.role}</div>
+                        <div style={{ fontSize: 13, color: "rgba(255,255,255,0.7)", letterSpacing: "0.08em", marginTop: 2 }}>{exp.company}</div>
+                      </div>
+                      <ul style={{ margin: "0 0 24px", padding: "0 0 0 18px", listStyle: "disc" }}>
+                        {exp.bullets.map((b, j) => (
+                          <li key={j} style={{ color: "rgba(255,255,255,0.8)", fontSize: 13, lineHeight: 1.7 }}>{b}</li>
+                        ))}
+                      </ul>
+                      <div style={{ borderTop: "1px solid rgba(255,255,255,0.1)", paddingTop: 20 }}>
+                        <div style={{ fontSize: 9.9, fontWeight: 800, letterSpacing: "0.18em", color: "#fff", marginBottom: 16 }}>TOOLS & PLATFORMS</div>
+                        <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+                          {exp.tools.map((group, j) => (
+                            <div key={j} style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
+                              <div style={{ fontSize: 9, fontWeight: 800, letterSpacing: "0.12em", color: "#fff", minWidth: 130, paddingTop: 5, flexShrink: 0 }}>{group.category}</div>
+                              <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+                                {group.items.map((item, k) => (
+                                  <span key={k} style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.08em", padding: "4px 12px", border: "1px solid rgba(255,255,255,0.25)", borderRadius: 100, color: "rgba(255,255,255,0.6)", background: "rgba(255,255,255,0.06)" }}>{item}</span>
+                                ))}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    function PlaybookSection() {
+      const [open, setOpen] = useState(null);
+      const ref = useRef(null);
+      const inView = useInView(ref);
+      return (
+        <section id="playbook" ref={ref} style={{ padding: "100px clamp(24px,6vw,100px)" }}>
+          <div style={{ opacity: inView ? 1 : 0, transform: inView ? "translateY(0)" : "translateY(40px)", transition: "all 0.7s ease" }}>
+            <SectionTitle>MY PROCESS</SectionTitle>
+            <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+              {COPY.playbook.map((item, i) => {
+                const isOpen = open === i;
+                return (
+                  <div key={i} style={{ background: "rgba(255,255,255,0.08)", backdropFilter: "blur(12px)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: 12, overflow: "hidden" }}>
+                    <button onClick={() => setOpen(isOpen ? null : i)} style={{ width: "100%", padding: "24px 28px", background: "none", border: "none", cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center", color: "#fff", fontFamily: "'Anton', Impact, sans-serif", fontSize: 22, letterSpacing: "0.06em" }}>
+                      <span style={{ display: "flex", alignItems: "center", gap: 16 }}>
+                        <span style={{ fontSize: 13, color: "rgba(255,255,255,0.4)" }}>0{i + 1}</span>{item.title}
+                      </span>
+                      <span style={{ fontSize: 20, transition: "transform 0.3s", transform: isOpen ? "rotate(45deg)" : "rotate(0)" }}>+</span>
+                    </button>
+                    {isOpen && (
+                      <div style={{ padding: "0 28px 28px", display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(180px, 1fr))", gap: 12 }}>
+                        {item.steps.map((s, j) => (
+                          <div key={j} style={{ background: "rgba(255,255,255,0.06)", borderRadius: 8, padding: "16px 18px" }}>
+                            <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.14em", color: "rgba(255,255,255,0.5)", marginBottom: 6 }}>STEP {j + 1}</div>
+                            <div style={{ fontSize: 13, fontWeight: 700, color: "#fff", marginBottom: 6 }}>{s.step}</div>
+                            <div style={{ fontSize: 12, color: "rgba(255,255,255,0.7)", lineHeight: 1.6 }}>{s.desc}</div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    function ContactSection() {
+      const [copied, setCopied] = useState(false);
+      const [urlCopied, setUrlCopied] = useState(false);
+      const ref = useRef(null);
+      const inView = useInView(ref);
+      const copyEmail = () => { navigator.clipboard.writeText(COPY.email).then(() => { setCopied(true); setTimeout(() => setCopied(false), 2500); }); };
+      const shareCV = () => { navigator.clipboard.writeText(window.location.href).then(() => { setUrlCopied(true); setTimeout(() => setUrlCopied(false), 2500); }); };
+      return (
+        <section id="contact" ref={ref} style={{ padding: "100px clamp(24px,6vw,100px) 80px" }}>
+          <div style={{ opacity: inView ? 1 : 0, transform: inView ? "translateY(0)" : "translateY(40px)", transition: "all 0.7s ease" }}>
+            <SectionTitle>LET'S TALK</SectionTitle>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, maxWidth: 800 }} className="contact-grid">
+              <div>
+                <div style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.18em", color: "#fff", marginBottom: 18 }}>CONTACT ME ON SOCIALS</div>
+                <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap", marginBottom: 12 }}>
+                  {[
+                    { label: "X / Twitter", href: "https://x.com/nftriles", icon: (
+                      <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    )},
+                    { label: "Telegram", href: "https://t.me/nftriles", icon: (
+                      <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.96 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                    )},
+                    { label: "Email", href: `mailto:${COPY.email}`, icon: (
+                      <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    )},
+                    { label: "LinkedIn", href: "https://www.linkedin.com/in/riley-watson-b7b32628b/", icon: (
+                      <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    )},
+                  ].map((s, i) => (
+                    s.href ? (
+                      <a key={i} href={s.href} target="_blank" rel="noopener noreferrer" title={s.label} style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 54, height: 54, background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.18)", borderRadius: 10, color: "#fff", textDecoration: "none", transition: "background 0.2s, transform 0.2s" }}
+                        onMouseEnter={e => { e.currentTarget.style.background = "rgba(255,255,255,0.22)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
+                        onMouseLeave={e => { e.currentTarget.style.background = "rgba(255,255,255,0.1)"; e.currentTarget.style.transform = "translateY(0)"; }}
+                      >{s.icon}</a>
+                    ) : (
+                      <div key={i} title={s.label} style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 54, height: 54, background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 10, color: "rgba(255,255,255,0.5)" }}>{s.icon}</div>
+                    )
+                  ))}
+                </div>
+                
+              </div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+                <a href={`mailto:${COPY.email}`} style={{ ...btnStyle("outline"), textDecoration: "none", textAlign: "center", display: "block" }}>EMAIL ME</a>
+                <a href="https://calendly.com/nftriles/30minute" target="_blank" rel="noopener noreferrer" style={{ ...btnStyle("solid"), textDecoration: "none", textAlign: "center", display: "block", padding: "16px 24px", fontSize: 13, letterSpacing: "0.16em" }}>BOOK A CALL</a>
+                <button onClick={shareCV} style={{ ...btnStyle("outline"), textAlign: "center", width: "100%" }}>
+                  {urlCopied ? "✓ LINK COPIED" : "SHARE CV"}
+                </button>
+
+              </div>
+            </div>
+          </div>
+          <div style={{ marginTop: 80, paddingTop: 24, borderTop: "1px solid rgba(255,255,255,0.1)", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12 }}>
+            <span style={{ fontFamily: "'Anton', Impact, sans-serif", fontSize: 18, color: "rgba(255,255,255,0.5)", letterSpacing: "0.1em" }}>RILES WEB3 CV</span>
+          </div>
+        </section>
+      );
+    }
+
+    function App() {
+      return (
+        <div style={{ minHeight: "100vh", background: "linear-gradient(180deg, #fd2601 0%, #f37e1c 100%)", backgroundAttachment: "fixed" }}>
+          <Navbar />
+          <HeroSection />
+          <ImpactSection />
+          <CasesSection />
+          <ExperienceSection />
+          <PlaybookSection />
+          <ContactSection />
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<App />);
+  </script>
+</body>
+</html>
